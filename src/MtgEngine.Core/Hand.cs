@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MtgEngine.Domain
+﻿namespace MtgEngine.Domain
 {
     public class Hand
     {
-        //list of cards
+        public IList<Card> Cards { get; set; }
+
+        public Hand()
+        {
+            Cards = [];
+        }
+
+        public void PutCard(Card card)
+        {
+            Cards.Add(card);
+        }
     }
 }

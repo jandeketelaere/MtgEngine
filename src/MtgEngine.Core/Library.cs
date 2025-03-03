@@ -1,18 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MtgEngine.Domain
+﻿namespace MtgEngine.Domain
 {
     public class Library
     {
-        //list of cards from deck
+        public IList<Card> Cards { get; set; }
 
         public Library(Deck deck)
         {
-            
+            Cards = deck.Cards;    
+        }
+
+        public void ShuffleCards()
+        {
+            Cards.Shuffle();
+        }
+
+        public Card DrawCard()
+        {
+            var card = Cards[0];
+
+            Cards.Remove(card);
+
+            return card;
         }
     }
 }

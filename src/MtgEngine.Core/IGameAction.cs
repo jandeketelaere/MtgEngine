@@ -1,7 +1,6 @@
 ﻿namespace MtgEngine.Domain
 {
-    public class Stack
+    public interface IGameAction
     {
-
     }
 }

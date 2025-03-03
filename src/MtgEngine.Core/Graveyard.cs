@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MtgEngine.Domain
+﻿namespace MtgEngine.Domain
 {
     public class Graveyard
     {
+        public IList<Card> Cards { get; set; }
+
+        public Graveyard()
+        {
+            Cards = [];
+        }
     }
 }
